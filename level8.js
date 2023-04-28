@@ -12,11 +12,19 @@ class Player {
 
   playTurn(warrior) {
     // Cool code goes here
-    if(this.health = 0){
+    
+    let turno = 0;
+
+    if(turno = 0){
       warrior.walk();
+      turno = turno + 1;
+    }
+    else if(turno > 0 && warrior < 8){
+      warrior.shoot();
+      turno = turno + 1;
     }
     else{
-      warrior.shoot();
+      warrior.walk();
     }
     
     /*
@@ -42,6 +50,5 @@ class Player {
     this.health = warrior.health();
   */
     
-    this.health = 2;
   }
 }
